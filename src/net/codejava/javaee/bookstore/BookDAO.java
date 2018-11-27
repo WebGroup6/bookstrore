@@ -1,5 +1,5 @@
 package net.codejava.javaee.bookstore;
-
+ 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -8,12 +8,14 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
-
-//ds.database-driver=net.sourceforge.jtds.jdbc.Driver
-//ds.url=jdbc:jtds:sqlserver://localhost:1433/simplehr;instance=SQLEXPRESS
-	//ds.username=shoppingcart
-//ds.password=12345
+ 
+/**
+ * AbstractDAO.java
+ * This DAO class provides CRUD database operations for the table book
+ * in the database.
+ * @author www.codejava.net
+ *
+ */
 
 public class BookDAO {
     private String jdbcURL;
@@ -30,7 +32,7 @@ public class BookDAO {
     protected void connect() throws SQLException {
         if (jdbcConnection == null || jdbcConnection.isClosed()) {
             try {
-                Class.forName("com.mysql.jdbc.Driver");
+            	Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             } catch (ClassNotFoundException e) {
                 throw new SQLException(e);
             }

@@ -8,19 +8,20 @@
  
     <context-param>
         <param-name>jdbcURL</param-name>
-        <param-value>jdbc:sql://localhost:3306/bookstore</param-value>
+        <param-value>jdbc:sqlserver://localhost;database=Bookstore</param-value>
     </context-param>
- 
+
     <context-param>
         <param-name>jdbcUsername</param-name>
-        <param-value>root</param-value>
+        <param-value>Tram</param-value>
     </context-param>
- 
+
     <context-param>
         <param-name>jdbcPassword</param-name>
-        <param-value>P@ssw0rd</param-value>
+        <param-value>123</param-value>
     </context-param>
  
+
     <servlet>
         <servlet-name>ControllerServlet</servlet-name>
         <servlet-class>net.codejava.javaee.bookstore.ControllerServlet</servlet-class>

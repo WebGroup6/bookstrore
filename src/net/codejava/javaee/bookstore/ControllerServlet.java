@@ -6,14 +6,13 @@ import java.util.List;
  
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
  
 /**
- * ControllerServlet.java
- * This servlet acts as a page controller for the application, handling all
- * requests from the user.
+
  * @author www.codejava.net
  */
 public class ControllerServlet extends HttpServlet {
@@ -118,6 +117,5 @@ public class ControllerServlet extends HttpServlet {
         Book book = new Book(id);
         bookDAO.deleteBook(book);
         response.sendRedirect("list");
- 
     }
 }
